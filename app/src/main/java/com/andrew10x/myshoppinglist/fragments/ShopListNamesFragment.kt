@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.andrew10x.myshoppinglist.activities.MainApp
-import com.andrew10x.myshoppinglist.activities.ShopListActivity2
+import com.andrew10x.myshoppinglist.activities.ShopListActivity
 import com.andrew10x.myshoppinglist.databinding.FragmentShopListNamesBinding
 import com.andrew10x.myshoppinglist.db.MainViewModel
 import com.andrew10x.myshoppinglist.db.ShopListNameAdapter
@@ -87,8 +87,8 @@ class ShopListNamesFragment : BaseFragment(), ShopListNameAdapter.Listener {
     }
 
     override fun onClickItem(shopListNameItem: ShopListNameItem) {
-        val i = Intent(activity, ShopListActivity2:: class.java).apply {
-            putExtra(ShopListActivity2.SHOP_LIST_NAME, shopListNameItem)
+        val i = Intent(activity, ShopListActivity:: class.java).apply {
+            putExtra(ShopListActivity.SHOP_LIST_NAME, shopListNameItem)
         }
         startActivity(i)
     }
